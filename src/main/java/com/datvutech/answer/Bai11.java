@@ -3,7 +3,7 @@ package com.datvutech.answer;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-import com.datvutech.common.SystemInput;
+import com.datvutech.common.AppScanner;
 
 /***
  * Kiểm tra xem ngày (gồm 3 thành phần là ngày, tháng, năm) cho trước có phải là
@@ -31,7 +31,7 @@ public class Bai11 {
         int day = -1;
         int month = -1;
         int year = -1;
-        Scanner scanner = SystemInput.getScanner();
+        Scanner scanner = AppScanner.getSystemScanner();
         System.out.print("day = ");
         day = scanner.nextInt();
         System.out.print("month = ");

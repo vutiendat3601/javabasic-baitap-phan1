@@ -2,7 +2,7 @@ package com.datvutech.answer;
 
 import java.util.Scanner;
 
-import com.datvutech.common.SystemInput;
+import com.datvutech.common.AppScanner;
 
 public class Bai12 {
     public static int countDivisorsFermat(int n) {
@@ -20,9 +20,9 @@ public class Bai12 {
 
     public static void main(String[] args) {
         int n = -1;
-        Scanner scan = SystemInput.getScanner();
+        Scanner scanner = AppScanner.getSystemScanner();
         System.out.print("n = ");
-        n = scan.nextInt();
+        n = scanner.nextInt();
         int numOfDivisors = countDivisorsFermat(n);
         System.out.println("Number of divisor of " + n + ": " + numOfDivisors);
     }

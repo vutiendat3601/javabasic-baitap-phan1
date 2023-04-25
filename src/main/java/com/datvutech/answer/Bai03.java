@@ -2,7 +2,7 @@ package com.datvutech.answer;
 
 import java.util.Scanner;
 
-import com.datvutech.common.SystemInput;
+import com.datvutech.common.AppScanner;
 
 // 3. Nhập vào 2 số nguyên, in ra màn hình số nhỏ hơn và số lớn hơn.
 public class Bai03 {
@@ -13,7 +13,7 @@ public class Bai03 {
     }
 
     public static void main(String[] args) {
-        Scanner scanner = SystemInput.getScanner();
+        Scanner scanner = AppScanner.getSystemScanner();
         System.out.print("a = ");
         int a = scanner.nextInt();
         System.out.print("b = ");

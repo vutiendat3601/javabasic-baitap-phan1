@@ -2,12 +2,12 @@ package com.datvutech.answer;
 
 import java.util.Scanner;
 
-import com.datvutech.common.SystemInput;
+import com.datvutech.common.AppScanner;
 
 // 5. Giải và biện luận phương trình bậc 2 (ax2 + bx + c =0).
 public class Bai05 {
     public static void main(String[] args) {
-        Scanner scanner = SystemInput.getScanner();
+        Scanner scanner = AppScanner.getSystemScanner();
         // Nhap vao a, b, c
         System.out.print("a = ");
         double a = scanner.nextInt();

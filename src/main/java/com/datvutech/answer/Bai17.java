@@ -2,7 +2,7 @@ package com.datvutech.answer;
 
 import java.util.Scanner;
 
-import com.datvutech.common.SystemInput;
+import com.datvutech.common.AppScanner;
 
 /**
  *
@@ -10,9 +10,9 @@ import com.datvutech.common.SystemInput;
  */
 public class Bai17 {
     public static void main(String[] args) {
-        Scanner scan = SystemInput.getScanner();
+        Scanner scanner = AppScanner.getSystemScanner();
         System.out.println("n = ");
-        int n = scan.nextInt();
+        int n = scanner.nextInt();
         int sum = 0;
 
         while (n != 0) {

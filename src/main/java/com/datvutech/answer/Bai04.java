@@ -2,7 +2,7 @@ package com.datvutech.answer;
 
 import java.util.Scanner;
 
-import com.datvutech.common.SystemInput;
+import com.datvutech.common.AppScanner;
 
 //4. Nhập vào 3 số nguyên, in ra màn hình số nhỏ nhất và số lớn nhất.
 public class Bai04 {
@@ -21,7 +21,7 @@ public class Bai04 {
     }
 
     public static void main(String[] args) {
-        Scanner scanner = SystemInput.getScanner();
+        Scanner scanner = AppScanner.getSystemScanner();
 
         System.out.print("a = ");
         int a = scanner.nextInt();

@@ -2,7 +2,7 @@ package com.datvutech.answer;
 
 import java.util.Scanner;
 
-import com.datvutech.common.SystemInput;
+import com.datvutech.common.AppScanner;
 
 // Nhập vào chỉ số điện cũ và chỉ số điện mới. Tính tiền điện phải trả trong tháng, dữ liệu nhập
 // phải đảm bảo chỉ số điện cũ <= chỉ số điện mới. Cách thức tính tiền điện theo quy định sau:
@@ -41,7 +41,7 @@ public class Bai09 {
     }
 
     public static void main(String[] args) {
-        Scanner scanner = SystemInput.getScanner();
+        Scanner scanner = AppScanner.getSystemScanner();
         System.out.print("oldIndex = ");
         int oldIndex = scanner.nextInt();
         System.out.print("newIndex = ");

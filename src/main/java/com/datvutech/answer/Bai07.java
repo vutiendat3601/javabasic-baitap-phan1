@@ -2,13 +2,13 @@ package com.datvutech.answer;
 
 import java.util.Scanner;
 
-import com.datvutech.common.SystemInput;
+import com.datvutech.common.AppScanner;
 
 // 7. Nhập vào một số nguyên là tháng, cho biết tháng đó có bao nhiêu ngày (nếu là tháng 2 thì yêu
 // cầu nhập thêm năm).
 public class Bai07 {
     public static void main(String[] args) {
-        Scanner scanner = SystemInput.getScanner();
+        Scanner scanner = AppScanner.getSystemScanner();
 
         System.out.print("month (1-12) = ");
         int month = scanner.nextInt();

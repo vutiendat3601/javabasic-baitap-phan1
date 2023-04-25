@@ -2,7 +2,7 @@ package com.datvutech.answer;
 
 import java.util.Scanner;
 
-import com.datvutech.common.SystemInput;
+import com.datvutech.common.AppScanner;
 
 public class Bai13 {
 
@@ -30,9 +30,9 @@ public class Bai13 {
 
     public static void main(String[] args) {
         int n = -1;
-        Scanner scan = SystemInput.getScanner();
+        Scanner scanner = AppScanner.getSystemScanner();
         System.out.print("n = ");
-        n = scan.nextInt();
+        n = scanner.nextInt();
         int cnt = makeListOfOddDivisors(n);
         System.out.print("List of odd divisors: ");
         for (int i = 0; i < cnt; i++) {
