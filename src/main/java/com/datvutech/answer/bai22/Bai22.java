@@ -1,5 +1,6 @@
 package com.datvutech.answer.bai22;
 
+import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -26,7 +27,6 @@ bên dưới, đến khi nào người dùng chọn 0 thì thoát chương trìn
 - 16. Đảo ngược mảng.
  */
 public class Bai22 {
-    Scanner sysScanner = AppScanner.getSystemScanner();
     private Bai22IntArray bai22IntArray;
 
     public Bai22() {
@@ -37,9 +37,9 @@ public class Bai22 {
     public void showMenu() {
         System.out.print("""
                 #####################################################################\n
-                Chuong trinh mang:
+                Chương trình mảng số nguyên:
                 - 1. Nhập giá trị cho n phần tử mảng từ bàn phím;
-                - 2. Phát sinh giá trị ngẫu nhiên từ -199 đến 199 cho n phần tử mảng;
+                - 2. Phát sinh giá trị ngẫu nhiên từ [a] đến [b] cho n phần tử mảng;
                 - 3. Xuất mảng ra màn hình;
                 - 4. Liệt kê các giá trị âm có trong mảng;
                 - 5. Liệt kê các số nguyên tố có trong mảng;
@@ -54,7 +54,7 @@ public class Bai22 {
                 - 14. Tìm giá trị nhỏ nhất trong mảng;
                 - 15. Tìm số âm lớn nhất trong mảng;
                 - 16. Đảo ngược mảng.
-                - 17. Nhap mang tu file.
+                - 17. Nhập mảng từ file.
                 \n####################################################################\n
                 """);
     }
@@ -65,9 +65,9 @@ public class Bai22 {
      */
     public boolean processMenu() {
         int c = 0;
-        Scanner scanner = AppScanner.getSystemScanner();
+        Scanner sysScanner = AppScanner.getSystemScanner();
         System.out.print("Lua chon = ");
-        c = scanner.nextInt();
+        c = sysScanner.nextInt();
         System.out.println(
                 "\n------------------------------------RESULT------------------------------------\n");
 
@@ -76,17 +76,17 @@ public class Bai22 {
         switch (c) {
             case 1:
                 System.out.print("n = ");
-                n = scanner.nextInt();
+                n = sysScanner.nextInt();
                 nums = bai22IntArray.fillInArray(n);
                 System.out.println(Arrays.toString(nums));
                 break;
             case 2:
                 System.out.print("n = ");
-                n = scanner.nextInt();
+                n = sysScanner.nextInt();
                 System.out.print("minValue = ");
-                int minValue = scanner.nextInt();
+                int minValue = sysScanner.nextInt();
                 System.out.print("maxValue = ");
-                int maxValue = scanner.nextInt();
+                int maxValue = sysScanner.nextInt();
                 nums = bai22IntArray.generateRandomNums(n, minValue, maxValue);
                 System.out.println(Arrays.toString(nums));
                 break;
@@ -103,10 +103,10 @@ public class Bai22 {
                 break;
             case 6:
                 System.out.println("a = ");
-                int a = scanner.nextInt();
+                int a = sysScanner.nextInt();
                 System.out.println("b = ");
-                int b = scanner.nextInt();
-                nums = bai22IntArray.getAToBArray(a, b);
+                int b = sysScanner.nextInt();
+                nums = bai22IntArray.getAToBNums(a, b);
                 System.out.println(Arrays.toString(nums));
                 break;
             case 7:
@@ -119,7 +119,7 @@ public class Bai22 {
                 break;
             case 9:
                 System.out.println("x = ");
-                final int x = scanner.nextInt();
+                final int x = sysScanner.nextInt();
                 long biggerThanXCount = bai22IntArray.countBiggerThanX(x);
                 System.out.println(biggerThanXCount);
                 break;
@@ -138,21 +138,29 @@ public class Bai22 {
                 System.out.println("theBiggestNum: " + theBiggestNum);
                 break;
             case 14:
-
+                long theSmallestNum = bai22IntArray.getTheSmallestNum();
+                System.out.println("theSmallestNum: " + theSmallestNum);
                 break;
             case 15:
-
+                long theBiggestNegativeNum = bai22IntArray.getTheBiggestNegativeNum();
+                System.out.println("theBiggestNegativeNum: " + theBiggestNegativeNum);
                 break;
             case 16:
-
+                nums = bai22IntArray.reverseNums();
+                System.out.println("Reversed array: " + Arrays.toString(nums));
                 break;
             case 17:
-                bai22IntArray.fillArrayByFile();
+                nums = bai22IntArray.fillArrayByFile();
+                System.out.println(Arrays.toString(nums));
                 break;
         }
         System.out.println(
                 "\n------------------------------------END OF RESULT-------------------------------------------------------------\n");
-        sysScanner.nextInt();
+        try {
+            System.in.read();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         return c != 0;
     }
 
