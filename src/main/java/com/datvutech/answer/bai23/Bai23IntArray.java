@@ -151,8 +151,6 @@ public class Bai23IntArray {
 
     // 11. Liệt kê dòng chứa toàn giá trị chẵn;
     public int[][] getLinesHasOnlyEvenNums() {
-        final int theBiggestNum = getTheBiggestNum();
-        PrimeNumberEratosthenes primeNums = new PrimeNumberEratosthenes(theBiggestNum);
         int numOfLines = 0;
         boolean[] lineHasOnlyEvenNums = new boolean[m];
         for (int i = 0; i < m; i++) {
