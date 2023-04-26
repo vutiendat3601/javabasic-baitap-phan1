@@ -2,7 +2,7 @@ package com.datvutech.answer;
 
 import java.util.Scanner;
 
-import com.datvutech.common.AppScanner;
+import com.datvutech.util.AppScanner;
 
 // 7. Nhập vào một số nguyên là tháng, cho biết tháng đó có bao nhiêu ngày (nếu là tháng 2 thì yêu
 // cầu nhập thêm năm).

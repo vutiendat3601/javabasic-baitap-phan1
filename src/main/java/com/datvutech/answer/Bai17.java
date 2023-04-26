@@ -2,7 +2,7 @@ package com.datvutech.answer;
 
 import java.util.Scanner;
 
-import com.datvutech.common.AppScanner;
+import com.datvutech.util.AppScanner;
 
 /**
  *

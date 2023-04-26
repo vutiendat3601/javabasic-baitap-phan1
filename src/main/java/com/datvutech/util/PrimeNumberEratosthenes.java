@@ -1,4 +1,4 @@
-package com.datvutech.answer;
+package com.datvutech.util;
 
 public class PrimeNumberEratosthenes {
     private boolean[] primes;

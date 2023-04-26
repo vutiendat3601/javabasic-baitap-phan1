@@ -7,8 +7,8 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 import java.util.stream.IntStream;
 
-import com.datvutech.answer.PrimeNumberEratosthenes;
-import com.datvutech.common.AppScanner;
+import com.datvutech.util.AppScanner;
+import com.datvutech.util.PrimeNumberEratosthenes;
 
 public class Bai22IntArray {
     private int[] nums = new int[0];
@@ -66,7 +66,7 @@ public class Bai22IntArray {
     }
 
     // 7. Tính tổng giá trị các phần tử là số nguyên tố;
-    public int getSumOfPrimeNums() {
+    public int calculateSumOfPrimeNums() {
         final int MAX_VALUE = 199;
         PrimeNumberEratosthenes primeNum = new PrimeNumberEratosthenes(MAX_VALUE);
 
@@ -75,7 +75,7 @@ public class Bai22IntArray {
     }
 
     // 8. Tính trung bình cộng của các phần tử dương có trong mảng;
-    public double getAvgOfPositiveNums() {
+    public double calculateAvgOfPositiveNums() {
         double avgOfPositiveNums = IntStream.of(nums).filter((x) -> x > 0).average().getAsDouble();
         return avgOfPositiveNums;
     }
@@ -143,17 +143,17 @@ public class Bai22IntArray {
     }
 
     // 17. Nhập giá trị cho mảng từ file
-    public int[] fillArrayByFile() {
+    public int[] fillArrayByFile(String filePath) {
         try {
-            Path filePath = Paths.get("arr.txt");
-            final Scanner fileReader = new Scanner(Files.newInputStream(filePath));
+            Path path = Paths.get(filePath);
+            final Scanner fileReader = new Scanner(Files.newInputStream(path));
             n = fileReader.nextInt();
             nums = new int[n];
             for (int i = 0; i < n; i++) {
                 nums[i] = fileReader.nextInt();
             }
         } catch (IOException e) {
-            return new int[0];
+            System.out.println("Error when loading file, please try again!");
         }
         return nums;
     }

@@ -1,4 +1,4 @@
-package com.datvutech.common;
+package com.datvutech.util;
 
 import java.io.IOException;
 import java.nio.file.Files;

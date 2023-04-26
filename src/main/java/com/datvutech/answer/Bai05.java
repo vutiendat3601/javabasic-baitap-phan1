@@ -2,7 +2,7 @@ package com.datvutech.answer;
 
 import java.util.Scanner;
 
-import com.datvutech.common.AppScanner;
+import com.datvutech.util.AppScanner;
 
 // 5. Giải và biện luận phương trình bậc 2 (ax2 + bx + c =0).
 public class Bai05 {

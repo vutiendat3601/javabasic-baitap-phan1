@@ -2,7 +2,7 @@ package com.datvutech.answer;
 
 import java.util.Scanner;
 
-import com.datvutech.common.AppScanner;
+import com.datvutech.util.AppScanner;
 
 // 3. Nhập vào 2 số nguyên, in ra màn hình số nhỏ hơn và số lớn hơn.
 public class Bai03 {

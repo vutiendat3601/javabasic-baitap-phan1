@@ -4,7 +4,9 @@ import java.io.IOException;
 import java.util.Arrays;
 import java.util.Scanner;
 
-import com.datvutech.common.AppScanner;
+import javax.swing.JFileChooser;
+
+import com.datvutech.util.AppScanner;
 
 /* 
  * Viết chương trình tạo mảng một chiều và cho phép người dùng chọn thực hiện các chức năng
@@ -110,15 +112,15 @@ public class Bai22 {
                 System.out.println(Arrays.toString(nums));
                 break;
             case 7:
-                long sumOfPrimeNums = bai22IntArray.getSumOfPrimeNums();
+                long sumOfPrimeNums = bai22IntArray.calculateSumOfPrimeNums();
                 System.out.println("sumOfPrimeNums: " + sumOfPrimeNums);
                 break;
             case 8:
-                double avgOfPositiveNums = bai22IntArray.getAvgOfPositiveNums();
+                double avgOfPositiveNums = bai22IntArray.calculateAvgOfPositiveNums();
                 System.out.println("avgOfPositiveNums: " + avgOfPositiveNums);
                 break;
             case 9:
-                System.out.println("x = ");
+                System.out.print("x = ");
                 final int x = sysScanner.nextInt();
                 long biggerThanXCount = bai22IntArray.countBiggerThanX(x);
                 System.out.println(biggerThanXCount);
@@ -150,8 +152,16 @@ public class Bai22 {
                 System.out.println("Reversed array: " + Arrays.toString(nums));
                 break;
             case 17:
-                nums = bai22IntArray.fillArrayByFile();
-                System.out.println(Arrays.toString(nums));
+                JFileChooser fileChooser = new JFileChooser();
+                int option = fileChooser.showOpenDialog(null);
+                String filePath = "arr.txt";
+                if (option == JFileChooser.APPROVE_OPTION) {
+                    filePath = fileChooser.getSelectedFile().getAbsolutePath();
+                }
+                nums = bai22IntArray.fillArrayByFile(filePath);
+                if (nums.length != 0) {
+                    System.out.println(Arrays.toString(nums));
+                }
                 break;
         }
         System.out.println(

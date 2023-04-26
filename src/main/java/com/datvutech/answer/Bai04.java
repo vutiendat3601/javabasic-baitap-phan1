@@ -2,7 +2,7 @@ package com.datvutech.answer;
 
 import java.util.Scanner;
 
-import com.datvutech.common.AppScanner;
+import com.datvutech.util.AppScanner;
 
 //4. Nhập vào 3 số nguyên, in ra màn hình số nhỏ nhất và số lớn nhất.
 public class Bai04 {

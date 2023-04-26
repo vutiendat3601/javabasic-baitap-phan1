@@ -3,7 +3,7 @@ package com.datvutech.answer;
 import java.time.LocalDate;
 import java.util.Scanner;
 
-import com.datvutech.common.AppScanner;
+import com.datvutech.util.AppScanner;
 
 /***
  * Kiểm tra xem ngày (gồm 3 thành phần là ngày, tháng, năm) cho trước có phải là

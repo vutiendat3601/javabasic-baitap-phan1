@@ -11,7 +11,7 @@
     <property name="java.vm.specification.version" value="17"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/temurin-17-jdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/vutiendat3601/workspace/learning/java/javabasic-baitap-phan1/target/surefire/surefirebooter3650758335680803040.jar /home/vutiendat3601/workspace/learning/java/javabasic-baitap-phan1/target/surefire 2023-04-25T08-10-38_796-jvmRun1 surefire229714804897006876tmp surefire_01945781422436968138tmp"/>
+    <property name="sun.java.command" value="/home/vutiendat3601/workspace/learning/java/javabasic-baitap-phan1/target/surefire/surefirebooter1313327252202799657.jar /home/vutiendat3601/workspace/learning/java/javabasic-baitap-phan1/target/surefire 2023-04-26T23-16-05_463-jvmRun1 surefire11611034674385460982tmp surefire_016586295705012864595tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/vutiendat3601/workspace/learning/java/javabasic-baitap-phan1/target/test-classes:/home/vutiendat3601/workspace/learning/java/javabasic-baitap-phan1/target/classes:/home/vutiendat3601/.m2/repository/org/projectlombok/lombok/1.18.26/lombok-1.18.26.jar:/home/vutiendat3601/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.2/junit-jupiter-api-5.9.2.jar:/home/vutiendat3601/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/vutiendat3601/.m2/repository/org/junit/platform/junit-platform-commons/1.9.2/junit-platform-commons-1.9.2.jar:/home/vutiendat3601/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/vutiendat3601/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.2/junit-jupiter-params-5.9.2.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -26,7 +26,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/vutiendat3601/workspace/learning/java/javabasic-baitap-phan1/target/surefire/surefirebooter3650758335680803040.jar"/>
+    <property name="surefire.real.class.path" value="/home/vutiendat3601/workspace/learning/java/javabasic-baitap-phan1/target/surefire/surefirebooter1313327252202799657.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.6+10"/>
     <property name="user.name" value="vutiendat3601"/>
@@ -51,6 +51,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="com.datvutech.answer.Bai03Test.testAbiggerThanB" classname="com.datvutech.answer.Bai03Test" time="0"/>
+  <testcase name="com.datvutech.answer.Bai03Test.testAbiggerThanB" classname="com.datvutech.answer.Bai03Test" time="0.001"/>
   <testcase name="com.datvutech.answer.Bai03Test.testAsmallerThanB" classname="com.datvutech.answer.Bai03Test" time="0"/>
 </testsuite>
