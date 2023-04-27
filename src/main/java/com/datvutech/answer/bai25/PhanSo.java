@@ -82,46 +82,90 @@ public class PhanSo {
     }
 
     public PhanSo cong(PhanSo a) {
+        if (a == null) {
+            return this;
+        }
         int ucln = NumberUtils.gcd(mauSo, a.mauSo);
         PhanSo res = new PhanSo(
                 tuSo * (ucln / mauSo) + a.tuSo * (ucln / a.mauSo), // cong tu so
                 ucln);
         ucln = NumberUtils.gcd(res.tuSo, res.mauSo);
-        res.tuSo /= ucln;
-        res.mauSo /= ucln;
+        res.toiGian();
         return res;
     }
 
     public PhanSo tru(PhanSo a) {
+        if (a == null) {
+            return this;
+        }
         int ucln = NumberUtils.gcd(mauSo, a.mauSo);
         PhanSo res = new PhanSo(
                 tuSo * (ucln / mauSo) - a.tuSo * (ucln / a.mauSo), // tru tu so
                 ucln);
-        ucln = NumberUtils.gcd(res.tuSo, res.mauSo);
-        res.tuSo /= ucln;
-        res.mauSo /= ucln;
+        res.toiGian();
         return res;
     }
 
     public PhanSo nhan(PhanSo a) {
+        if (a == null) {
+            return this;
+        }
         PhanSo res = new PhanSo(
                 tuSo * a.tuSo,
                 mauSo * a.mauSo);
-        int ucln = NumberUtils.gcd(res.tuSo, res.mauSo);
-        res.tuSo /= ucln;
-        res.mauSo /= ucln;
+        res.toiGian();
         return res;
+
     }
 
     public PhanSo chia(PhanSo a) {
-
+        if (a == null) {
+            return this;
+        }
         PhanSo res = new PhanSo(
                 tuSo * a.mauSo,
                 mauSo * a.tuSo);
-        int ucln = NumberUtils.gcd(res.tuSo, res.mauSo);
-        res.tuSo /= ucln;
-        res.mauSo /= ucln;
+        res.toiGian();
         return res;
+    }
+
+    public PhanSo cong(int a) {
+
+        PhanSo res = new PhanSo(
+                tuSo + a * mauSo, // cong tu so
+                mauSo);
+        res.toiGian();
+        return res;
+    }
+
+    public PhanSo tru(int a) {
+        PhanSo res = new PhanSo(
+                tuSo - a * mauSo, // tru tu so
+                mauSo);
+        res.toiGian();
+        return res;
+    }
+
+    public PhanSo nhan(int a) {
+        PhanSo res = new PhanSo(
+                tuSo * a,
+                mauSo);
+        res.toiGian();
+        return res;
+    }
+
+    public PhanSo chia(int a) {
+        PhanSo res = new PhanSo(
+                tuSo,
+                mauSo * a);
+        res.toiGian();
+        return res;
+    }
+
+    public void toiGian() {
+        int ucln = NumberUtils.gcd(tuSo, mauSo);
+        tuSo /= ucln;
+        mauSo /= ucln;
     }
 
     @Override
