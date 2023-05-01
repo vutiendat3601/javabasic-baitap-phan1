@@ -12,7 +12,7 @@ import lombok.Setter;
 @NoArgsConstructor
 @Getter
 @Setter
-public class TamGiac {
+public class TamGiac { // Bai26
     private Diem2D a;
     private Diem2D b;
     private Diem2D c;
@@ -47,5 +47,34 @@ public class TamGiac {
         System.out.print("C.y = ");
         y = sysScanner.nextInt();
         c.setY(y);
+    }
+
+    public void xuat() {
+        System.out.format("A = (%d,%d)\n", a.getX(), a.getY());
+        System.out.format("B = (%d,%d)\n", b.getX(), b.getY());
+        System.out.format("C = (%d,%d)\n", c.getX(), c.getY());
+    }
+
+    // Triangle Area Formula: S = (1/2) | AB.AC.sinBAC |
+    // Triangle Area Formula: S = (1/2) | (xB-xA)(yC-yA) - (xC-xA)(uB-yA) |
+    public float calculateArea() {
+        float temp = 1.0F * (b.getX() - a.getX()) * (c.getY() - a.getY())
+                - (c.getX() - a.getX()) * (b.getY() - a.getY());
+        temp = temp > 0 ? temp : -temp;
+        float area = temp / 2;
+        return area;
+    }
+
+    public float calculatePerimeter() {
+        float ab = a.khoangCach(b);
+        float ac = a.khoangCach(c);
+        float bc = b.khoangCach(c);
+        return ab + ac + bc;
+    }
+
+    public static void main(String[] args) {
+        TamGiac tamGiac1 = new TamGiac(new Diem2D(12, 2), new Diem2D(-1, 9), new Diem2D(3, -2));
+        System.out.println("Dien tich tam giac = " + tamGiac1.calculateArea());
+        System.out.println("Chu vi tam giac = " + tamGiac1.calculatePerimeter());
     }
 }
