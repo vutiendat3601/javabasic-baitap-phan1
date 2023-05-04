@@ -5,21 +5,27 @@ import java.util.Scanner;
 import com.datvutech.util.AppScanner;
 
 import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
 
-@NoArgsConstructor
-@Getter
-@Setter
+/***
+ * This class is used for representing a point in Oxy coordinate plane
+ * 
+ * @author Dat Vu
+ * @date 2023-05-04
+ */
 public class Diem2D {
+    /* #: Properties */
     private int x;
     private int y;
-    private String name;
 
-    // Constructor
+    @Getter
+    private String name;
+    /* # Properties */
+
+    /* #: Constructors */
     public Diem2D(int x, int y) {
         this.x = x;
         this.y = y;
+        name = "DiemKhongTen";
     }
 
     public Diem2D(int x, int y, String name) {
@@ -27,7 +33,9 @@ public class Diem2D {
         this.name = name;
     }
 
-    // Bussiness
+    /* # Constructors */
+
+    /* #: Input, output */
     public void nhapDiem() {
         Scanner sysScanner = AppScanner.getSystemScanner();
         System.out.print("x = ");
@@ -36,9 +44,11 @@ public class Diem2D {
         y = sysScanner.nextInt();
 
     }
+    /* # Input, output */
 
+    /* #: Bussiness */
     public void hienThi() {
-        System.out.format("Toa do hien tai cua diem %s: (%d, %d)\n", name, x, y);
+        System.out.format("Toạ độ điểm %s: (%d, %d)\n", name, x, y);
     }
 
     public void doiDiem(int dX, int dY) {
@@ -57,8 +67,8 @@ public class Diem2D {
     public float khoangCach() {
         int dX = x > 0 ? x : -x;
         int dY = y > 0 ? y : -y;
-        int delta = dX * dX + dY * dY;
-        return (float) Math.sqrt(delta);
+        int sqrKc = dX * dX + dY * dY;
+        return (float) Math.sqrt(sqrKc);
     }
 
     public float khoangCach(Diem2D diem) {
@@ -68,9 +78,10 @@ public class Diem2D {
         int dY = y - diem.y;
         dY = dY > 0 ? dY : -dY;
 
-        int delta = dX * dX + dY * dY;
-        return (float) Math.sqrt(delta);
+        int sqrKc = dX * dX + dY * dY;
+        return (float) Math.sqrt(sqrKc);
     }
+    /* # Bussiness */
 
     public static void main(String[] args) {
         Diem2D A = new Diem2D(3, 4, "A");
@@ -83,7 +94,7 @@ public class Diem2D {
         Diem2D C = new Diem2D(-B.giaTriX(), -B.giaTriY(), "C");
         C.hienThi();
 
-        System.out.println("Khoang cach diem B den tam O: " + B.khoangCach());
-        System.out.println("Khoang cach diem A den diem B: " + B.khoangCach(A));
+        System.out.format("Khoảng cách điểm %s đến tâm O: %.2f\n", B.name, B.khoangCach());
+        System.out.format("Khoảng cách điểm %s đến điểm %s: %.2f\n", A.name, B.name, A.khoangCach(B));
     }
 }
