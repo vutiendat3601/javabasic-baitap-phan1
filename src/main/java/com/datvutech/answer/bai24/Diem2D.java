@@ -5,13 +5,16 @@ import java.util.Scanner;
 import com.datvutech.util.AppScanner;
 
 import lombok.Getter;
+import lombok.Setter;
 
 /***
  * This class is used for representing a point in Oxy coordinate plane
  * 
  * @author Dat Vu
  * @date 2023-05-04
+ * 
  */
+@Setter
 public class Diem2D {
     /* #: Properties */
     private int x;
@@ -32,7 +35,6 @@ public class Diem2D {
         this(x, y);
         this.name = name;
     }
-
     /* # Constructors */
 
     /* #: Input, output */
@@ -42,7 +44,6 @@ public class Diem2D {
         x = sysScanner.nextInt();
         System.out.print("y = ");
         y = sysScanner.nextInt();
-
     }
     /* # Input, output */
 
@@ -52,8 +53,8 @@ public class Diem2D {
     }
 
     public void doiDiem(int dX, int dY) {
-        x -= dX;
-        y -= dY;
+        x += dX;
+        y += dY;
     }
 
     public int giaTriX() {
@@ -94,7 +95,7 @@ public class Diem2D {
         Diem2D C = new Diem2D(-B.giaTriX(), -B.giaTriY(), "C");
         C.hienThi();
 
-        System.out.format("Khoảng cách điểm %s đến tâm O: %.2f\n", B.name, B.khoangCach());
-        System.out.format("Khoảng cách điểm %s đến điểm %s: %.2f\n", A.name, B.name, A.khoangCach(B));
+        System.out.format("Khoảng cách điểm %s đến tâm O: %.2f\n", B.getName(), B.khoangCach());
+        System.out.format("Khoảng cách điểm %s đến điểm %s: %.2f\n", A.getName(), B.getName(), A.khoangCach(B));
     }
 }
