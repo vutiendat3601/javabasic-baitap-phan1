@@ -1,0 +1,51 @@
+* Requirements:
+	- Use case - Xuất thông tin của các nhân viên:
+		1. Ứng dụng hiển thị menu
+		2. Người dùng chọn option "Danh sách nhân viên"
+		3. Hệ thống hiển thị danh sách các nhân viên
+	- Nouns (candidate classes):
+		+ Ứng dụng => No
+		+ Người dùng => No
+		+ Menu => No
+		+ Nhân viên => Yes
+		+ Danh sách nhân viên => Yes
+	- Verbs (candidate operations):
+		+ Hiển thị menu => Yes
+		+ Hiển thị danh sách nhân viên => Yes
+	----------------------------------------------------------------------------------
+	- Use case - Nhập thông tin của các nhân viên để phục vụ cho việc tính lương:
+		1. Ứng dụng hiển thị menu
+		2. Người dùng chọn option "Tạo mới nhân viên"
+		3. Người dùng chọn loại nhân viên muốn tạo
+		4. Người dùng nhập thông tin cho nhân viên mới
+		5. Nhân viên tồn tại trên hệ thống
+	- Nouns (candidate classes):
+		+ Ứng dụng => No
+		+ Người dùng => No
+		+ Menu => No
+		+ Nhân viên => Yes
+		+ Cách tính lương => Yes - It varies
+	- Verbs (candidate operations):
+		+ Tạo mới nhân viên => Yes
+		+ Nhập thông tin => Yes
+	----------------------------------------------------------------------------------
+	- Use case - Tính tổng lương của công ty và tổng lương của từng loại nhân viên:
+		1. Ứng dụng hiển thị menu
+		2. Người dùng chọn option "Tính lương"
+		3. Hệ thống hiển thị tuỳ chọn loại tính lương (tổng lương hoặc tổng lương theo loại nhân viên)
+		4. Người dùng chọn loại tính lương
+		5. Hệ thống hiển thị tổng lương theo tuỳ chọn ở bước 3
+	- Nouns (candidate classes):
+		+ Ứng dụng => No
+		+ Người dùng => No
+		+ Menu => No
+		+ Nhân viên => Yes
+		+ Loại tính lương => No
+	- Verbs (candidate operations):
+		+ Tính lương => Yes
+		+ Tính tổng lương => Yes
+		+ Tính tổng lương theo loại nhân viên => Yes
+
+|Họ      |Tên     |Năm vào làm     |Lương cơ bản    |Loại nhân viên  |
+
+

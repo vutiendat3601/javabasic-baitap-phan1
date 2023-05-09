@@ -8,19 +8,18 @@ import lombok.Getter;
 import lombok.Setter;
 
 /***
- * This class is used for representing a point in Oxy coordinate plane
+ * This class represents a point in Oxy coordinate plane
  * 
  * @author Dat Vu
  * @date 2023-05-04
- * 
  */
+
 @Setter
+@Getter
 public class Diem2D {
     /* #: Properties */
     private int x;
     private int y;
-
-    @Getter
     private String name;
     /* # Properties */
 
@@ -45,13 +44,13 @@ public class Diem2D {
         System.out.print("y = ");
         y = sysScanner.nextInt();
     }
-    /* # Input, output */
 
-    /* #: Bussiness */
     public void hienThi() {
         System.out.format("Toạ độ điểm %s: (%d, %d)\n", name, x, y);
     }
+    /* # Input, output */
 
+    /* #: Bussiness */
     public void doiDiem(int dX, int dY) {
         x += dX;
         y += dY;

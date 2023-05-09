@@ -1,0 +1,56 @@
+* Features list:
+    1. Hệ thống có khả năng cung cấp thông tin cơ bản của các nhân viên
+	2. Hệ thống phải xuất thông tin của nhân viên
+	3. Hệ thống có khả năng nhập thông tin cơ bản của nhiều nhân viên vào hệ thống trong một lúc.
+	4. Hệ thống phải tính tiền lương của các nhân viên theo các thông tin đa dạng của từng nhân viên
+	5. Hệ thống xuất được tổng luơng của công ty, và tổng luơng theo từng loại nhân viên
+	
+* Use cases:
+    - Use case - Nhập thông tin của các nhân viên :
+		1. 
+		2. 
+		3. 
+		4. 
+		5. 
+	- Nouns (candidate classes):
+		+ 
+		+ 
+		+ 
+		+ 
+		+ 
+	- Verbs (candidate operations):
+		+ 
+		+ 
+	----------------------------------------------------------------------------------
+	- Use case - Xuất thông tin của các nhân viên:
+		1. 
+		2. 
+		3.
+	- Nouns (candidate classes):
+		+ 
+		+ 
+		+ 
+		+ 
+		+ 
+	- Verbs (candidate operations):
+		+ 
+		+ 
+	----------------------------------------------------------------------------------
+    Use case - Tính lương
+	----------------------------------------------------------------------------------
+	- Use case - Tính tổng lương của công ty và tổng lương của từng loại nhân viên:
+		1. 
+		2. 
+		3. 
+		4. 
+		5. 
+	- Nouns (candidate classes):
+		+ 
+		+ 
+		+ 
+		+ 
+		+ 
+	- Verbs (candidate operations):
+		+ 
+		+ 
+		+ 

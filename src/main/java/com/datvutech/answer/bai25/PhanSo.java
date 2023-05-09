@@ -6,18 +6,27 @@ import java.util.Scanner;
 import com.datvutech.util.AppScanner;
 import com.datvutech.util.NumberUtils;
 
-import lombok.NoArgsConstructor;
+/***
+ * This class represents a fraction in mathematics
+ * 
+ * @author Dat Vu
+ * @date 2023-05-04
+ */
 
-@NoArgsConstructor
 public class PhanSo {
+    /* #: Properties */
     private int tuSo;
     private int mauSo;
+    /* # Properties */
 
+    /* #: Constructors */
     public PhanSo(int tuSo, int mauSo) {
         this.tuSo = tuSo;
         this.mauSo = mauSo;
     }
+    /* #: Constructors */
 
+    /* #: Input, output */
     // Hàm nhập giá trị cho 1 phân số.
     // Nếu phân số vừa nhập có mẫu số = 0 thì yêu cầu nhập lại.
     public void nhapPhanSo() {
@@ -36,15 +45,11 @@ public class PhanSo {
     // Yêu cầu: nếu tử số =0 thì chỉ in ra số 0, nếu mẫu số =1 thì chỉ in ra tử số.
     public void hienThi() {
         System.out.print("Gia tri: ");
-        if (tuSo == 0) {
-            System.out.println(0);
-        } else if (mauSo == 1) {
-            System.out.println(tuSo);
-        } else {
-            System.out.println(tuSo + "/" + mauSo);
-        }
+        System.out.println(this);
     }
+    /* # Input, output */
 
+    /* #: Bussiness */
     // Hàm nghịch đảo phân số (làm thay đổi giá trị phân số) void nghichDao();
     public void nghichDao() {
         if (tuSo == 0) {
@@ -167,6 +172,7 @@ public class PhanSo {
         tuSo /= ucln;
         mauSo /= ucln;
     }
+    /* # Bussiness */
 
     @Override
     public String toString() {
@@ -174,7 +180,7 @@ public class PhanSo {
     }
 
     public static void main(String[] args) {
-        PhanSo p = new PhanSo(1, 2);
+        PhanSo p = new PhanSo(1, 3);
         System.out.println(p.giaTriThuc());
         System.out.println(p.lonHon(new PhanSo(1, 2)));
         System.out.println(p.cong(new PhanSo(1, 2)));
