@@ -1,4 +1,4 @@
-package com.datvutech.answer;
+package com.datvutech.answer.bai10;
 
 import java.time.LocalDate;
 import java.util.Scanner;

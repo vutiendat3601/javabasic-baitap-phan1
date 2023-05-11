@@ -1,4 +1,4 @@
-package com.datvutech.answer;
+package com.datvutech.answer.bai13;
 
 import java.util.Scanner;
 

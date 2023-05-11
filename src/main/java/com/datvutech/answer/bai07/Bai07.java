@@ -1,7 +1,8 @@
-package com.datvutech.answer;
+package com.datvutech.answer.bai07;
 
 import java.util.Scanner;
 
+import com.datvutech.answer.bai06.Bai06;
 import com.datvutech.util.AppScanner;
 
 // 7. Nhập vào một số nguyên là tháng, cho biết tháng đó có bao nhiêu ngày (nếu là tháng 2 thì yêu
