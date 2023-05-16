@@ -9,6 +9,8 @@ import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvFileSource;
 
+import com.datvutech.answer.bai09.Bai09;
+
 public class Bai09Test {
     private static FileWriter fWriter;
 

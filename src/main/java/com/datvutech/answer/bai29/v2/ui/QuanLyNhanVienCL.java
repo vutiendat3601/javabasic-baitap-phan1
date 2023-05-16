@@ -24,11 +24,11 @@ import com.datvutech.util.NumberUtils;
  * 3. Tính tổng lương của công ty và tổng lương của từng loại nhân viên
  */
 
-public class QuanLyNhanVienCLI {
+public class QuanLyNhanVienCL {
     NhanVienRepository nhanVienRepo;
 
     /* #: CLI */
-    public QuanLyNhanVienCLI() {
+    public QuanLyNhanVienCL() {
         nhanVienRepo = new NhanVienRepositoryCSV();
     }
 
@@ -252,7 +252,7 @@ public class QuanLyNhanVienCLI {
     /* # Bussiness */
 
     public static void main(String[] args) {
-        QuanLyNhanVienCLI cli = new QuanLyNhanVienCLI();
+        QuanLyNhanVienCL cli = new QuanLyNhanVienCL();
         cli.run();
     }
 }

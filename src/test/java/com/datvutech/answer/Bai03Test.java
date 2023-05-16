@@ -4,6 +4,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
 
 import org.junit.jupiter.api.Test;
 
+import com.datvutech.answer.bai03.Bai03;
+
 public class Bai03Test {
     @Test
     public void testAbiggerThanB() {
